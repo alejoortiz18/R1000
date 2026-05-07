@@ -1,0 +1,29 @@
+{
+  "name": "r1000",
+  "version": "1.0.0",
+  "description": "R1000 - Proyecto .NET con pruebas E2E con Playwright",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:report": "playwright show-report",
+    "test:debug": "playwright test --debug"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alejoortiz18/R1000.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alejoortiz18/R1000/issues"
+  },
+  "homepage": "https://github.com/alejoortiz18/R1000#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.59.1"
+  }
+}

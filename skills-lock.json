@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "skills": {
+    "dev-best-practices": {
+      "source": "c:\\Users\\Alejandro\\.agents\\skills\\dev-best-practices",
+      "sourceType": "local",
+      "computedHash": "c3f4a56cf59a010d6b1330bdd3e139b632b3e3b6da257407e4a83c0b647f6bd4"
+    },
+    "dotnet-csharp": {
+      "source": "c:\\Users\\Alejandro\\.agents\\skills\\dotnet-csharp",
+      "sourceType": "local",
+      "computedHash": "e293b9a8cfe255dfc53c0e7c38438f0f808380c1a6133e620f3aee2a3b8a5317"
+    },
+    "dotnet-testing": {
+      "source": "c:\\Users\\Alejandro\\.agents\\skills\\dotnet-testing",
+      "sourceType": "local",
+      "computedHash": "fcfbe36f00ecca3aef581875881023a9f65ace178a097d36bfb1647710854340"
+    },
+    "efcore": {
+      "source": "c:\\Users\\Alejandro\\.agents\\skills\\efcore",
+      "sourceType": "local",
+      "computedHash": "0ab2dfac38e4f16d4dd558dfc63552d4cb5438bb6e3c30be2d5390da181939b9"
+    },
+    "frontend-design": {
+      "source": "c:\\Users\\Alejandro\\.agents\\skills\\frontend-design",
+      "sourceType": "local",
+      "computedHash": "516bd2154eb843a8240e43d5b285229129853114ad7075a5e141e1c08e408c84"
+    },
+    "playwright-cli": {
+      "source": "c:\\Users\\Alejandro\\.agents\\skills\\playwright-cli",
+      "sourceType": "local",
+      "computedHash": "a07462654e72ec3b463aa0f3af744c320c57808505abe49e44845436e0050a1a"
+    },
+    "ui-ux-pro-max": {
+      "source": "c:\\Users\\Alejandro\\.agents\\skills\\ui-ux-pro-max",
+      "sourceType": "local",
+      "computedHash": "6337038fe1fe6bbe1b9f252ab678ee575859190bab6f0f246f4061824eb40875"
+    },
+    "web-design-guidelines": {
+      "source": "c:\\Users\\Alejandro\\.agents\\skills\\web-design-guidelines",
+      "sourceType": "local",
+      "computedHash": "d8e7d3afe37dcc8a97b99ffb5afdb4d0919ae0092ea8b68f44eb201f035e33ac"
+    }
+  }
+}
