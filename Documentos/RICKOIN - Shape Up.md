@@ -835,7 +835,7 @@ El problema más delicado: si dos usuarios intentan comprar la última boleta di
   
   Artículo: [____________________________]
   Descripción: [textarea]
-  Imagen: [Subir imagen]
+  URL imagen: [________________________________]  (ej: enlace de Google Drive, CDN o imagen pública)
   Valor del artículo (COP): [__________]
   
   Precio por boleta (Rickoin): [___]
@@ -896,7 +896,7 @@ Si el usuario elige pagar 30 Fichas + 20 Rickoin por una boleta de 50, el sistem
 
 **5. Imágenes de los artículos**
 
-No construimos un CDN ni servicio de imágenes en este ciclo. Las imágenes de rifas se almacenan en Azure Blob Storage (1 imagen por rifa, máx 5MB). No hay galería, no hay múltiples imágenes, no hay compresión automática en esta versión.
+No construimos ni integramos ningún servicio de almacenamiento de imágenes. El admin ingresa una **URL externa** que apunta a la imagen del artículo (Google Drive, CDN público u otro). El sistema la renderiza directamente con `<img src>`. No hay subida de archivos, no hay Azure Blob Storage, no hay validación de formato ni tamaño. Si la URL no es accesible, la vista muestra un placeholder. Esta decisión elimina completamente la complejidad y el costo de almacenamiento de imágenes.
 
 ---
 

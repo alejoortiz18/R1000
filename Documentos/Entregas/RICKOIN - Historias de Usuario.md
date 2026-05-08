@@ -103,7 +103,7 @@ Cada historia tiene un identificador con la forma `USR-C[n]-[nnn]` donde `[n]` e
 
 **Criterios de aceptación:**
 
-- [ ] El usuario puede ver el catálogo de rifas con nombre, imagen, precio de boleta, progreso de boletas vendidas y fecha de cierre
+- [ ] El usuario puede ver el catálogo de rifas con nombre, imagen (URL externa si fue configurada), precio de boleta, progreso de boletas vendidas y fecha de cierre
 - [ ] El usuario puede ver el detalle de cada rifa activa (artículo, reglas, punto de equilibrio, progreso)
 - [ ] El usuario puede ver su perfil propio y el estado de su cuenta
 - [ ] El usuario puede subir o actualizar su documento de identidad (única acción de escritura disponible en modo observador)
@@ -558,10 +558,11 @@ Cada historia tiene un identificador con la forma `USR-C[n]-[nnn]` donde `[n]` e
 
 **Criterios de aceptación:**
 
-- [ ] El formulario requiere: nombre del artículo, descripción, imagen, valor estimado del artículo en COP, precio por boleta en Rickoin, total de boletas disponibles, punto de equilibrio (mínimo de boletas), fecha de inicio y fecha de cierre
+- [ ] El formulario requiere: nombre del artículo, descripción, URL de imagen (campo opcional), valor estimado del artículo en COP, precio por boleta en Rickoin, total de boletas disponibles, punto de equilibrio (mínimo de boletas), fecha de inicio y fecha de cierre
 - [ ] El punto de equilibrio no puede ser mayor al total de boletas (validación: `punto_equilibrio <= total_boletas`)
 - [ ] Se puede configurar el máximo de boletas que un mismo usuario puede comprar en esta rifa (por defecto: valor de configuración global)
-- [ ] La imagen del artículo se almacena en Azure Blob Storage (1 imagen, máximo 5 MB, formatos JPG/PNG)
+- [ ] La URL de imagen es opcional; si se proporciona, el sistema la renderiza directamente con `<img src>` sin almacenamiento local — se acepta cualquier URL pública (Google Drive, CDN, etc.)
+- [ ] Si la URL de imagen no se proporciona o no es accesible, se muestra un placeholder visual sin mensajes de error
 - [ ] El estado inicial puede ser `Borrador` o `Activa`
 - [ ] Una rifa en `Borrador` no es visible para los usuarios
 - [ ] Al guardar, el sistema valida todos los campos y muestra errores en línea
@@ -579,7 +580,7 @@ Cada historia tiene un identificador con la forma `USR-C[n]-[nnn]` donde `[n]` e
 - [ ] Una rifa en `Borrador` puede ser editada y publicada desde el panel de administración
 - [ ] Al publicar, el estado cambia a `Activa` y la rifa aparece en el catálogo público
 - [ ] Una rifa en estado `Activa` no puede volver a estado `Borrador`
-- [ ] Solo los campos no críticos (descripción, imagen) pueden editarse una vez que la rifa está activa
+- [ ] Solo los campos no críticos (descripción, URL de imagen) pueden editarse una vez que la rifa está activa
 
 ---
 
@@ -607,7 +608,7 @@ Cada historia tiene un identificador con la forma `USR-C[n]-[nnn]` donde `[n]` e
 
 **Criterios de aceptación:**
 
-- [ ] El catálogo muestra las rifas en estado `Activa` con: nombre, imagen, precio de boleta en Rickoin, progreso de boletas vendidas (barra visual + número), fecha de cierre
+- [ ] El catálogo muestra las rifas en estado `Activa` con: nombre, imagen (renderizada desde la URL si fue proporcionada), precio de boleta en Rickoin, progreso de boletas vendidas (barra visual + número), fecha de cierre
 - [ ] Las rifas finalizadas o canceladas se muestran en una sección colapsada al final del catálogo
 - [ ] El catálogo es visible para cualquier usuario, incluyendo Observadores y visitantes no registrados
 - [ ] Los usuarios Observadores ven el catálogo completo pero los botones de compra muestran `"Activa tu cuenta para participar"` y no ejecutan acción
@@ -623,7 +624,7 @@ Cada historia tiene un identificador con la forma `USR-C[n]-[nnn]` donde `[n]` e
 
 **Criterios de aceptación:**
 
-- [ ] La vista de detalle muestra: nombre del artículo, imagen, descripción, valor estimado del artículo en COP, precio de boleta en Rickoin y COP, total de boletas, boletas vendidas, boletas disponibles, punto de equilibrio y estado (alcanzado o no), barra de progreso visual, fecha de cierre con días restantes
+- [ ] La vista de detalle muestra: nombre del artículo, imagen (renderizada desde URL si existe), descripción, valor estimado del artículo en COP, precio de boleta en Rickoin y COP, total de boletas, boletas vendidas, boletas disponibles, punto de equilibrio y estado (alcanzado o no), barra de progreso visual, fecha de cierre con días restantes
 - [ ] Se calcula y muestra la probabilidad del usuario si compra N boletas (actualizada al cambiar la cantidad seleccionada)
 - [ ] Si el usuario ya compró boletas en esta rifa, se muestran sus boletas y sus números
 - [ ] Los botones de compra están habilitados solo para usuarios Activos
@@ -713,7 +714,7 @@ Cada historia tiene un identificador con la forma `USR-C[n]-[nnn]` donde `[n]` e
 
 - El control de concurrencia se implementa con transacciones SQL con bloqueo pesimista; no se usa Redis, colas ni locks distribuidos
 - El número de boleta es asignado automáticamente por el sistema; los usuarios no eligen su número
-- Las imágenes de las rifas se almacenan en Azure Blob Storage (1 imagen por rifa, máximo 5 MB)
+- Las imágenes de las rifas se gestionan mediante **URL externa** (campo `ImagenUrl` opcional en la entidad `Rifa`) — no hay almacenamiento de archivos, no hay Azure Blob Storage; el admin ingresa la URL de la imagen al crear la rifa (Google Drive u otro servicio público)
 - La compra mixta (Rickoin + Fichas) se procesa en una única transacción atómica; no son dos transacciones separadas
 - El máximo de boletas por usuario por rifa es configurable al crear la rifa y en la configuración global como valor por defecto
 

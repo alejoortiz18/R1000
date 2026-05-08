@@ -74,7 +74,7 @@ El cliente planteó inicialmente **dos aplicaciones independientes**:
 - La navegación sería incoherente — el usuario no sabría dónde hacer qué
 
 #### Complejidad operativa sin beneficio
-- Dos pipelines de despliegue independientes
+- Dos procesos de despliegue independientes
 - Lógica de negocio duplicada (validaciones, reglas, notificaciones)
 - Doble esfuerzo en correcciones y actualizaciones
 

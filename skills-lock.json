@@ -16,6 +16,12 @@
       "sourceType": "local",
       "computedHash": "fcfbe36f00ecca3aef581875881023a9f65ace178a097d36bfb1647710854340"
     },
+    "ef-core": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "skillPath": "skills/ef-core/SKILL.md",
+      "computedHash": "23f0a7c7e8c050337d67303f0af339da1ab8f0aa6a334f13112c3f85250c329c"
+    },
     "efcore": {
       "source": "c:\\Users\\Alejandro\\.agents\\skills\\efcore",
       "sourceType": "local",
@@ -30,6 +36,12 @@
       "source": "c:\\Users\\Alejandro\\.agents\\skills\\playwright-cli",
       "sourceType": "local",
       "computedHash": "a07462654e72ec3b463aa0f3af744c320c57808505abe49e44845436e0050a1a"
+    },
+    "sql-best-practices": {
+      "source": "mindrally/skills",
+      "sourceType": "github",
+      "skillPath": "sql-best-practices/SKILL.md",
+      "computedHash": "a7f4ea6fa2b8e6438fd6d3ac4a8826880f666315737ea77e8c29832d616cd547"
     },
     "ui-ux-pro-max": {
       "source": "c:\\Users\\Alejandro\\.agents\\skills\\ui-ux-pro-max",
