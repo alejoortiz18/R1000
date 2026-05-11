@@ -348,7 +348,8 @@ Cualquiera de las partes podrá terminar anticipadamente el contrato mediante av
 - No podrá exigir la entrega de componentes no pagados
 
 **Si la terminación es por incumplimiento del Desarrollador:**
-- Se entregará al Cliente únicamente lo que haya sido pagado y efectivamente desarrollado
+- Se entregará al Cliente únicamente lo que haya sido pagado y efectivamente desarrollado, documentos, codigo fuente y configuraciones correspondientes a esos entregables
+- No se realizarán devoluciones por pagos ya efectuados
 - El Desarrollador no tendrá derecho a pagos adicionales por trabajo no demostrado
 
 ---
@@ -385,6 +386,7 @@ El Desarrollador no será responsable por:
 - Errores causados por mal uso del sistema por parte de usuarios finales
 - Daños derivados de información incorrecta o tardía suministrada por el Cliente
 - Costos de plataformas, dominios y servicios externos
+- Desarrollo del documento de términos y condiciones legales, políticas de privacidad o asesoría legal
 
 ---
 

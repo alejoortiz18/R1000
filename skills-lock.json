@@ -6,6 +6,12 @@
       "sourceType": "local",
       "computedHash": "c3f4a56cf59a010d6b1330bdd3e139b632b3e3b6da257407e4a83c0b647f6bd4"
     },
+    "dotnet-architecture-patterns": {
+      "source": "wshaddix/dotnet-skills",
+      "sourceType": "github",
+      "skillPath": "skills/dotnet-architecture-patterns/SKILL.md",
+      "computedHash": "8fe67c906491d2544a4bb69abe2cb0cf451e0125407eb4d6931359af2dd2a5ee"
+    },
     "dotnet-csharp": {
       "source": "c:\\Users\\Alejandro\\.agents\\skills\\dotnet-csharp",
       "sourceType": "local",
@@ -42,6 +48,12 @@
       "sourceType": "github",
       "skillPath": "sql-best-practices/SKILL.md",
       "computedHash": "a7f4ea6fa2b8e6438fd6d3ac4a8826880f666315737ea77e8c29832d616cd547"
+    },
+    "stored-procedures": {
+      "source": "aj-geddes/useful-ai-prompts",
+      "sourceType": "github",
+      "skillPath": "skills/stored-procedures/SKILL.md",
+      "computedHash": "355b9dfba1a06661ce5bed0faed650f14539e1044d30e910b9b23bf559825c4d"
     },
     "ui-ux-pro-max": {
       "source": "c:\\Users\\Alejandro\\.agents\\skills\\ui-ux-pro-max",
