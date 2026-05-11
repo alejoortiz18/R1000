@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/alejoortiz18/R1000#readme",
   "devDependencies": {
-    "@playwright/test": "^1.59.1"
+    "@playwright/test": "^1.59.1",
+    "marked": "^18.0.3"
   }
 }
